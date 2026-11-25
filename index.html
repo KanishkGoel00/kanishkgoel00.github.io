@@ -182,6 +182,22 @@
     /* ─── ABOUT ─────────────────────────────────────────────────── */
     #about p + p { margin-top: 0.8rem; }
 
+    .about-callout {
+      margin-top: 1.3rem;
+      padding: 0.85rem 1.1rem;
+      background: var(--accent-lt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.89rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .about-callout strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
     /* ─── PUBLICATIONS ──────────────────────────────────────────── */
     .pub-list { display: flex; flex-direction: column; gap: 1.4rem; }
 
@@ -333,7 +349,7 @@
         <img class="hero-photo" src="me.jpg" alt="Kanishk Goel" />
         <div class="hero-text">
           <h1>Kanishk Goel</h1>
-          <p class="tagline">ML Systems Researcher</p>
+          <p class="tagline">Software Engineer @ Google &nbsp;·&nbsp; ML Systems</p>
           <div class="social-row">
 
             <a class="icon-link" href="https://github.com/KanishkGoel00" target="_blank" rel="noopener" title="GitHub">
@@ -374,14 +390,17 @@
       <h2 class="fade-in">About</h2>
       <div class="fade-in">
         <p>
-          I work on the systems side of large scale ML, focusing on making LLM inference faster, more efficient, and more predictable under real world workloads.
+          I am a Software Engineer at <strong>Google</strong> (Core ML), working on the systems side of large scale ML to make LLM and agentic inference faster, more efficient, and more predictable on TPUs. My current work focuses on automated optimal serving search and end-to-end observability for large scale serving workloads.
         </p>
         <p>
-          At <strong>Microsoft Research India</strong>, working with <a href="https://scholar.google.com/citations?hl=en&user=5akTCHoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Jayashree Mohan</a> and <a href="https://scholar.google.com/citations?hl=en&user=0P35aLUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Ramachandran Ramjee</a>, I study how to push the limits of serving efficiency through better request scheduling, parallelism strategies, and GPU level optimizations. A lot of my recent work explores how agent style workloads stress existing systems assumptions, and what needs to change to support them well.
+          Previously, at <strong>Microsoft Research India</strong>, working with <a href="https://scholar.google.com/citations?hl=en&user=5akTCHoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Jayashree Mohan</a> and <a href="https://scholar.google.com/citations?hl=en&user=0P35aLUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Ramachandran Ramjee</a>, I studied how to push the limits of serving efficiency through better request scheduling, parallelism strategies, and GPU level optimizations. Much of that work explored how agent style workloads stress existing systems assumptions, and what needs to change to support them well.
         </p>
         <p>
           More broadly, I am interested in the full stack of AI infrastructure, from kernel level optimizations to RL based post training methods that improve compute efficiency. I graduated from IIT Delhi in 2024 in Electrical Engineering with a minor in Computer Science.
         </p>
+        <div class="about-callout">
+          <strong>PhD Applications &amp; Mentoring:</strong> Happy to chat with students applying to CS systems PhD programs or deciding between grad school and industry ML infra roles (went through the 2025–26 cycle with offers from CMU, UW, UIUC, Cornell, UT Austin, and Georgia Tech). Feel free to <a href="mailto:k.goel2601@gmail.com">drop me a note</a>.
+        </div>
       </div>
     </section>
 
@@ -422,7 +441,8 @@
           <p class="pub-title">Sutradhara: System Optimizations for Agentic Inference</p>
           <p class="pub-authors">Anish Biswas, Kanishk Goel, Srivarshinee S, Jayashree Mohan, Alind Khare, Anjaly Parayil, Ramachandran Ramjee, Chetan Bansal</p>
           <p class="pub-venue">
-           📄 <strong>ASPLOS 2027</strong> (full paper) &nbsp;|&nbsp; 🪧 <strong>EuroSys 2026</strong> (poster) 
+            📄 <strong>ASPLOS 2027</strong> (full paper, 10.5% acceptance rate, 65/619) &nbsp;|&nbsp;
+            🪧 <strong>EuroSys 2026</strong> (poster)
           </p>
           <p class="pub-desc">
             Optimizing multi-turn agentic inference by overlapping system-prompt processing with tool
@@ -438,10 +458,10 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/></svg>
               Paper
             </a>
-            <span class="pub-link" style="cursor:default;opacity:0.5;">
+            <a class="pub-link" href="https://github.com/microsoft/sutradhara" target="_blank" rel="noopener">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              Code coming soon
-            </span>
+              Code
+            </a>
           </div>
         </div>
 
